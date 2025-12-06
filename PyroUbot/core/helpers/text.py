@@ -1,54 +1,93 @@
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
-
 from PyroUbot import OWNER_ID, bot, ubot, get_expired_date
 
 
-class MSG:     
+class MSG:
     def EXP_MSG_UBOT(X):
         return f"""
-<blockquote><b>❏ ᴘᴇᴍʙᴇʀɪᴛᴀʜᴜᴀɴ</b>
-<b>├ ᴀᴋᴜɴ:</b> <a href=tg://user?id={X.me.id}>{X.me.first_name} {X.me.last_name or ''}</a>
-<b>├ ɪᴅ:</b> <code>{X.me.id}</code>
-<b>╰ ᴍᴀsᴀ ᴀᴋᴛɪꜰ ᴛᴇʟᴀʜ ʜᴀʙɪs sɪʟᴀʜᴋᴀɴ ᴛғ ᴋᴇ ᴠɪᴏs ɢᴀɴᴛᴇɴɢ ᴜɴᴛᴜᴋ ᴀᴋsᴇs ʟᴀɢɪ ʏᴀᴀᴀ</b></blockquote>
+<blockquote>
+<b>❏ ⚠️ PEMBERITAHUAN KADALUARSA ⚠️</b>
+<b>├─ • Nama Akun:</b> <a href=tg://user?id={X.me.id}>{X.me.first_name} {X.me.last_name or ''}</a>
+<b>├─ • ID Pengguna:</b> <code>{X.me.id}</code>
+<b>├─ • Status:</b> <code>Tidak Aktif</code>
+<b>╰─ • Masa aktif telah habis</b>
+</blockquote>
 """
 
     def START(message):
         return f"""
-<blockquote><b>👋🏻 ʜᴀʟᴏ <a href=tg://user?id={message.from_user.id}>{message.from_user.first_name} {message.from_user.last_name or ''}</a>!
+<blockquote>
+<b>✨ HALO {message.from_user.first_name}! ✨</b>
 
-<b> 📚💎@{bot.me.username} Adalah Ucerbot Yang Dapat Membantu Anda Semua Yakannn....</b>
+<b>🤖 @{bot.me.username}</b>
+<i>Bot pembuat Userbot Telegram</i>
 
-🚀ʙᴏᴛ ɪɴɪ ᴅɪʙᴜᴀᴛ ᴅɪ ᴊᴇᴘᴀɴɢ ᴏʟᴇʜ <a href=tg://openmessage?user_id={OWNER_ID}>@viossset</a> ᴊɪᴋᴀ ᴀᴅᴀ ᴇʀʀᴏʀ ʟᴜ ᴜʀᴜsɪɴ ᴀᴊᴀ sᴇɴᴅɪʀɪ, sᴏʟᴜsɪ ᴅɪ: <a href=tg://openmessage?user_id={OWNER_ID}>@viossset</a>
+<b>📈 STATS:</b>
+├ Userbot aktif: <b>{len(ubot._ubot)}</b>
+├ Owner: <a href=tg://openmessage?user_id={OWNER_ID}>@Viosf_12</a>
+╰ Version: <b>SolidS v2.0</b>
 
-ᴛᴏᴛᴀʟ ᴘᴇɴɢɢᴜɴᴀ ᴜʙᴏᴛ: {len(ubot._ubot)} 
-ᴏᴡɴᴇʀ ᴜʙᴏᴛ: <a href=tg://openmessage?user_id={OWNER_ID}>XpiosXs</a>
-
-<u>ᴋʟɪᴋ ᴛᴏᴍʙᴏʟ ᴅɪʙᴀᴡᴀʜ ᴜɴᴛᴜᴋ ᴍᴇᴍʙᴜᴀᴛ ᴜsᴇʀʙᴏᴛ</u></b></blockquote>
+<b>🚀 Pilih menu untuk memulai:</b>
+</blockquote>
 """
 
     def TEXT_PAYMENT(harga, total, bulan):
         return f"""
-<blockquote><b>💬 sɪʟᴀʜᴋᴀɴ ᴍᴇʟᴀᴋᴜᴋᴀɴ ᴘᴇᴍʙᴀʏᴀʀᴀɴ ᴛᴇʀʟᴇʙɪʜ ᴅᴀʜᴜʟᴜ</b>
+<blockquote>
+<b>╭══════════════════╮</b>
+<b>│   💳 PEMBAYARAN   │</b>
+<b>╰══════════════════╯</b>
 
-<b>🎟️ ʜᴀʀɢᴀ ᴘᴇʀʙᴜʟᴀɴ: {harga}.000</b>
-
-<b>💳 ᴍᴏᴛᴏᴅᴇ ᴘᴇᴍʙᴀʏᴀʀᴀɴ:</b>
- <b>├ Qʀɪꜱ ᴀʟʟ ᴘᴀʏᴍᴇɴᴛ </b>
-<b>🔖 ᴛᴏᴛᴀʟ ʜᴀʀɢᴀ: ʀᴘ {total}.000</b>
-<b>🗓️ ᴛᴏᴛᴀʟ ʙᴜʟᴀɴ: {bulan}</b> 
-
-OWNER BOT : <a href=tg://openmessage?user_id={OWNER_ID}>@viossset</a> 
-
-<b>🛍 ᴋʟɪᴋ ᴛᴏᴍʙᴏʟ ᴋᴏɴꜰɪʀᴍᴀsɪ ᴜɴᴛᴜᴋ ᴋɪʀɪᴍ ʙᴜᴋᴛɪ ᴘᴇᴍʙᴀʏᴀʀᴀɴ ᴀɴᴅᴀ</b></blockquote>
+<b>📋 Rincian Pesanan:</b>
+<b>├─ • Harga/Bulan: Rp {harga}.000</b>
+<b>├─ • Durasi: {bulan} Bulan</b>
+<b>├─ • Total: Rp {total}.000</b>
+<b>│</b>
+<b>├ 💰 Metode Pembayaran:</b>
+<b>│   • QRIS All Payment</b>
+<b>│   • Transfer Bank</b>
+<b>│   • E-Wallet</b>
+<b>│</b>
+<b>├ 📞 Kontak Admin:</b>
+<b>│   <a href=tg://openmessage?user_id={OWNER_ID}>@Viosf_12</a></b>
+<b>│</b>
+<b>╰ 🛒 <b>Instruksi:</b></b>
+<b>   1. Lakukan pembayaran sesuai total</b>
+<b>   2. Screenshot bukti bayar</b>
+<b>   3. Klik tombol konfirmasi</b>
+<b>   4. Tunggu aktivasi (1-5 menit)</b>
+</blockquote>
 """
 
     async def UBOT(count):
         return f"""
-<blockquote><b>╭〢 ᴛʜʀᴇᴇʙᴏᴛ ᴋᴇ </b> <code>{int(count) + 1}/{len(ubot._ubot)}</code>
-<b> ├〢 ᴀᴄᴄᴏᴜɴᴛ </b> <a href=tg://user?id={ubot._ubot[int(count)].me.id}>{ubot._ubot[int(count)].me.first_name} {ubot._ubot[int(count)].me.last_name or ''}</a> 
-<b> ╰〢ᴜsᴇʀ ɪᴅ </b> <code>{ubot._ubot[int(count)].me.id}</code></blockquote>
+<blockquote>
+<b>╭══════════════════╮</b>
+<b>│   👤 USERBOT INFO  │</b>
+<b>╰══════════════════╯</b>
+
+<b>📊 No. Urut: {int(count) + 1}/{len(ubot._ubot)}</b>
+<b>├─ • Nama: <a href=tg://user?id={ubot._ubot[int(count)].me.id}>{ubot._ubot[int(count)].me.first_name} {ubot._ubot[int(count)].me.last_name or ''}</a></b>
+<b>├─ • User ID: <code>{ubot._ubot[int(count)].me.id}</code></b>
+<b>├─ • Username: @{ubot._ubot[int(count)].me.username or 'Tidak ada'}</b>
+<b>╰─ • Status: Aktif ✅</b>
+</blockquote>
 """
 
     def POLICY():
-        return """ <blockquote><b>ᴊɪᴋᴀ ᴀᴅᴀ ᴋᴇɴᴅᴀʟᴀ sɪʟᴀʜᴋᴀɴ ʜᴜʙᴜɴɢɪ  <a href=tg://openmessage?user_id={OWNER_ID}>@GanzVil21</a></b></blockquote>
+        return """<blockquote>
+<b>╭══════════════════╮</b>
+<b>│   📜 KEBIJAKAN     │</b>
+<b>╰══════════════════╯</b>
+
+<b>🔒 Ketentuan Layanan:</b>
+<b>• Setiap userbot maksimal 1 akun</b>
+<b>• Dilarang spam/auto status</b>
+<b>• Backup data secara berkala</b>
+<b>• Masa aktif sesuai pembayaran</b>
+<b>• Support 24 jam via admin</b>
+
+<b>📞 Hubungi kami jika ada kendala:</b>
+<b><a href=tg://openmessage?user_id={OWNER_ID}>@Viosf_12</a></b>
+</blockquote>
 """
